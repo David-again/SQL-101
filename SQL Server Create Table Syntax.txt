@@ -1,0 +1,8 @@
+create TABLE orders (
+  id int not NULL primary key,
+  order_number int,
+  customer_id int,
+  product_id INT
+  FOREIGN key (customer_id) REFERENCES customers(id),
+  FOREIGN key (product_id) REFERENCES products(id)
+  )
